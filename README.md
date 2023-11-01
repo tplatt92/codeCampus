@@ -1,5 +1,5 @@
 
-codeCampus
+<h1>codeCampus</h1>
 
 
 ![thumbnail-project-codecampus-small](https://github.com/tplatt92/codeCampus/assets/118260849/de7e0c37-ffe3-478c-9130-64de816d70de)

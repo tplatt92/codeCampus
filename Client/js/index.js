@@ -9,7 +9,7 @@ async function displayEvents(eventType = "All") {
     eventFeed.innerHTML = "";
 
     // Construct API URL based on eventType
-    let apiUrl = "http://localhost:7000/events/";
+    let apiUrl = "https://codecampus.onrender.com/events";
     if (eventType !== "All") {
       apiUrl += `${eventType}`;
     }
@@ -82,7 +82,7 @@ function createEventHTML(
       <h2 class="event__title">${eventTitle}</h2>
       <p class="event__location">${location.replaceAll("-", "<br>")}</p>
       <p class="event__attendees">
-        <span><img class="tick__icon" src="/assets/icons8-tick-32.png"></span>
+        <span><img class="tick__icon" src="./assets/icons8-tick-32.png"></span>
         <span id="${eventId}_attendees">${attendees} people going</span>
       </p>
       <button type="button" id="${eventId}" class="button__small">Attend</button>
@@ -93,7 +93,7 @@ function createEventHTML(
 
 // Function to handle attendance button click
 async function attendButtonFunction(button_id) {
-  const API_URL = `http://localhost:7000/events/${button_id}`;
+  const API_URL = `https://codecampus.onrender.com/events/${button_id}`;
   try {
     // Send a PATCH request to mark attendance
     const response = await fetch(API_URL, {

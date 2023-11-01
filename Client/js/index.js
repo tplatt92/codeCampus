@@ -9,7 +9,7 @@ async function displayEvents(eventType = "All") {
     eventFeed.innerHTML = "";
 
     // Construct API URL based on eventType
-    let apiUrl = "https://codecampus.onrender.com/events";
+    let apiUrl = "https://codecampus.onrender.com/events/";
     if (eventType !== "All") {
       apiUrl += `${eventType}`;
     }
